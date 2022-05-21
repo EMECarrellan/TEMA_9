@@ -1,0 +1,43 @@
+package com.company.demo1;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Cliente cliente = new Cliente();
+        Trabajador trabajador = new Trabajador();
+
+        cliente.edad = 28;
+        cliente.nombre = "Ataulfo";
+        cliente.telefono = 900100100;
+        cliente.credito = 3600.75;
+
+        trabajador.edad = 36;
+        trabajador.nombre = "Mariano";
+        trabajador.telefono = 666999666;
+        trabajador.salario = 1500.75;
+
+
+            System.out.println(cliente.edad + " " + cliente.nombre + " " + cliente.telefono + " Credito " + cliente.credito);
+            System.out.println(trabajador.edad + " " + trabajador.nombre + " " + trabajador.telefono + " Salario " + trabajador.salario);
+
+    }
+}
+
+class Persona {
+    int edad;
+    String nombre;
+    int telefono;
+
+}
+
+final class Cliente extends Persona {
+    double credito;
+}
+
+final class Trabajador extends Persona {
+
+    double salario;
+}
